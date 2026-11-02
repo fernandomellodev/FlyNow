@@ -1,0 +1,56 @@
+/* src/index.css - CSS Mobile-First e Reset (Aula 10 - Bloco 4) */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #f8fafc;
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+main {
+  max-width: 60rem;
+  margin-inline: auto;
+  padding: 1rem;
+  width: 100%;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 2.5rem);
+  margin-top: 0;
+}
+
+button, input, select, textarea {
+  min-height: 44px;
+  font: inherit;
+}
+
+/* Base de Grid para cartões de destinos (1 coluna em mobile) */
+.destinos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .destinos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64rem) {
+  .destinos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
